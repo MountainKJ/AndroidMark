@@ -6,9 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".HomePageActivity">
 
-    <com.x.core.rv.WrapRecycleView
+    <com.x.core.rv.WrapRecyclerView
         android:id="@+id/act_hp_ry"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
+        android:layout_height="match_parent"
+        app:wrv_layoutManager="linear"
+        app:wrv_layoutManagerOrientation="vertical"/>
 </android.support.constraint.ConstraintLayout>
