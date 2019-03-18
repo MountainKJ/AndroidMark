@@ -1,4 +1,4 @@
-package com.youqi.note;
+package com.youqi.note.holder;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.x.core.widget.wrv.BaseRecycleViewHolder;
+import com.youqi.note.R;
 import com.youqi.note.model.StringItem;
 
 public class HomePageHolder extends BaseRecycleViewHolder {
