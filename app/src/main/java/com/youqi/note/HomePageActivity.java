@@ -1,25 +1,33 @@
 package com.youqi.note;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
+
 import com.x.core.rv.WrapRecyclerView;
 import com.youqi.note.adapter.HomePageAdapter;
 import com.youqi.note.model.DividerB;
 import com.youqi.note.model.DividerS;
 import com.youqi.note.model.StringItem;
+import com.x.core.base.BaseActivity;
 
-public class HomePageActivity extends AppCompatActivity {
+import butterknife.BindView;
 
-    private WrapRecyclerView mRecycle;
+public class HomePageActivity extends BaseActivity {
+
+    @Override
+    protected int getContentView() {
+        return R.layout.activity_home_page;
+    }
+
+    @BindView(R.id.act_hp_ry)
+    WrapRecyclerView mRecycle;
+
     private HomePageAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page);
-        mRecycle = findViewById(R.id.act_hp_ry);
         adapter = new HomePageAdapter(this);
         mRecycle.setAdapter(adapter);
         addHeaderView();
