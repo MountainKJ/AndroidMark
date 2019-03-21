@@ -9,5 +9,5 @@
         android:gravity="center"
         android:text="@string/app_name"
         android:textColor="@android:color/white"
-        android:background="@color/colorAccent"/>
+        android:background="#f6f6f6"/>
 </RelativeLayout>

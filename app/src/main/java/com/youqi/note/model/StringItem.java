@@ -2,9 +2,19 @@ package com.youqi.note.model;
 
 public class StringItem {
     private String str;
+    private int itemId;
 
-    public StringItem(String str) {
+    public int getItemId() {
+        return itemId;
+    }
+
+    public void setItemId(int itemId) {
+        this.itemId = itemId;
+    }
+
+    public StringItem(String str, int itemId) {
         this.str = str;
+        this.itemId = itemId;
     }
 
     public String getStr() {

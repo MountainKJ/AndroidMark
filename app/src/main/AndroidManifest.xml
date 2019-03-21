@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.youqi.note">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         tools:replace="android:appComponentFactory"
         android:appComponentFactory="@string/app_name"
@@ -17,8 +18,12 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.VIEW"/>
             </intent-filter>
         </activity>
+        <activity android:name=".ui.RetrofitTestActivity" />
+        <meta-data android:name="android.max_aspect" android:value="2.1" />
     </application>
 
 </manifest>

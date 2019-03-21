@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout
+    android:id="@+id/act_retrofit_refresh_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.scwang.smartrefresh.layout.header.ClassicsHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.x.core.rv.WrapRecyclerView
+        android:id="@+id/act_retrofit_test_wrv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:wrv_layoutManager="linear"
+        app:wrv_layoutManagerOrientation="vertical"/>
+    <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>
