@@ -23,6 +23,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.RetrofitTestActivity" />
+        <activity android:name=".ui.RxTestActivity" />
+
         <meta-data android:name="android.max_aspect" android:value="2.1" />
     </application>
 

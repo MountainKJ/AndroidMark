@@ -12,6 +12,7 @@ import com.youqi.note.model.DividerB;
 import com.youqi.note.model.DividerS;
 import com.youqi.note.model.StringItem;
 import com.youqi.note.ui.RetrofitTestActivity;
+import com.youqi.note.ui.RxTestActivity;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -47,10 +48,13 @@ public class HomePageActivity extends BaseActivity implements WrapRecyclerView.O
 
     private static AtomicInteger ai = new AtomicInteger();
     private static final int ID_TEST_RETROFIT = ai.getAndIncrement();
+    private static final int ID_TEST_RX = ai.getAndIncrement();
 
     private void addAdapterItem() {
         adapter.addItem(new DividerB(), null);
         adapter.addItem(new StringItem("Retrofit Test", ID_TEST_RETROFIT), null);
+        adapter.addItem(new DividerS(), null);
+        adapter.addItem(new StringItem("RxJava Test", ID_TEST_RX), null);
         adapter.addItem(new DividerS(), null);
         adapter.notifyDataSetChanged();
     }
@@ -66,6 +70,8 @@ public class HomePageActivity extends BaseActivity implements WrapRecyclerView.O
         int itemId = si.getItemId();
         if (itemId == ID_TEST_RETROFIT) {
             jumpAct(this, RetrofitTestActivity.class);
+        }else if(itemId == ID_TEST_RX) {
+            jumpAct(this, RxTestActivity.class);
         }
     }
 
